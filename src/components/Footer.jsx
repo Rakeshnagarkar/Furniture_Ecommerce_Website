@@ -64,7 +64,7 @@ const Footer = () => {
         </div>
         <div className="sm:flex-row flex-col w-11/12 sm:pb-2 pb-24 mx-auto border-t border-gray-600 py-2 flex justify-between items-center">
           <h4 className="flex items-center gap-1 font-medium text-sm">
-            <FaRegCopyright /> All rights reserved Furniture 2024.
+            <FaRegCopyright />Rockin’ Devs. All right reserved
           </h4>
           <img
             src="./img/card.png"
