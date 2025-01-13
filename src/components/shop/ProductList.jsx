@@ -18,7 +18,7 @@ function ProductList() {
 
     return (
         <>
-            <div className="flex justify-end items-center w-full p-5">
+            <div className="flex justify-end items-center w-full p-5 mt-6">
                 <SortDropDown products={intialProducts} SortedData={setData} />
             </div>
             <div className="w-full grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 py-3 gap-3">
