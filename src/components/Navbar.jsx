@@ -21,11 +21,11 @@ function Navbar() {
           <h1 className="font-bold text-2xl font-sans">Havenly Homes</h1>
         </div>
         <div className="sm:flex-1 sm:w-auto w-full sm:shadow-none z-50 sm:py-0 py-3 flex sm:relative fixed sm:bottom-auto bottom-0 sm:bg-transparent bg-white justify-center items-center">
-          <ul className="navbar-list flex justify-center w-full items-center mr-35">
+          <ul className="navbar-list flex justify-center w-full items-center mr-14">
             {navitems.map((item) => (
               <li
                 key={item.path}
-                className="navbar-item sm:rounded-none rounded-full hover:bg-lime-400 p-3"
+                className="navbar-item sm:rounded-none rounded-full hover:bg-lime-400"
               >
                 <Link
                   to={item.path}
