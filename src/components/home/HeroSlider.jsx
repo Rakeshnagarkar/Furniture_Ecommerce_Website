@@ -15,7 +15,7 @@ const HeroSlider = () => {
   }, []);
 
   return (
-    <div className="w-full">
+    <div className="w-full mt-7">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -24,7 +24,7 @@ const HeroSlider = () => {
           clickable: true,
         }}
         autoplay={{
-          delay: 2000, // 4 seconds delay
+          delay: 3000, 
           disableOnInteraction: true,
         }}
         modules={[Autoplay]}

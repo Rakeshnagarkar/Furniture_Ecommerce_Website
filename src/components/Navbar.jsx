@@ -20,8 +20,8 @@ function Navbar() {
         <div className="flex-1 flex items-center">
           <h1 className="font-bold text-2xl font-sans">Havenly Homes</h1>
         </div>
-        <div className="sm:flex-1 sm:w-auto w-full z-50 sm:py-0 py-3 flex justify-center items-center">
-          <ul className="navbar-list flex justify-center w-full items-center">
+        <div className="sm:flex-1 sm:w-auto w-full sm:shadow-none z-50 sm:py-0 py-3 flex sm:relative fixed sm:bottom-auto bottom-0 sm:bg-transparent bg-white justify-center items-center">
+          <ul className="navbar-list flex justify-center w-full items-center mr-20">
             {navitems.map((item) => (
               <li
                 key={item.path}
@@ -33,7 +33,7 @@ function Navbar() {
                   aria-label={item.label}
                 >
                   <span className="sm:block hidden">{item.label}</span>
-                  <span className="sm:hidden block text-2xl">{item.icon}</span>
+                  <span className="sm:hidden block text-2xl pr-10">{item.icon}</span>
                 </Link>
               </li>
             ))}
