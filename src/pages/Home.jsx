@@ -30,7 +30,7 @@ function Home() {
         <FeaturedProducts />
       </div>
       <div className="w-11/12 py-7 font-bold">
-        <span className="text-xl">Offer</span>
+        <span className="text-3xl">Offer</span>
         <OfferBanners />
       </div>
       <div className="w-11/12 py-5">

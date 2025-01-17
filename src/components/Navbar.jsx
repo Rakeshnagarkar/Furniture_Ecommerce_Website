@@ -21,11 +21,11 @@ function Navbar() {
           <h1 className="font-bold text-2xl font-sans">Heavenly Homes</h1>
         </div>
         <div className="sm:flex-1 sm:w-auto w-full sm:shadow-none z-50 sm:py-0 py-3 flex sm:relative fixed sm:bottom-auto bottom-0 sm:bg-transparent bg-white justify-center items-center">
-        <ul className="navbar-list flex justify-center w-full items-center mr-28 space-x-6">
+        <ul className="navbar-list flex justify-center w-full items-center mr-14">
   {navitems.map((item) => (
     <li
       key={item.path}
-      className="navbar-item sm:rounded-none rounded-full"
+      className="navbar-item sm:rounded-none rounded-full hover:bg-lime-400"
     >
       <Link
         to={item.path}
@@ -37,23 +37,14 @@ function Navbar() {
 
         {/* Icon for mobile screens */}
         <span
-          className="sm:hidden block hover:bg-lime-400 rounded-full"
-          style={{
-            display: "flex", // Ensure the icon is visible
-            alignItems: "center",
-            justifyContent: "center",
-            width: "2.5rem", // Define hover area size
-            height: "2.5rem", // Define hover area size
-            fontSize: "2rem", // Ensure the icon size is preserved
-          }}
+          className="sm:hidden block text-2xl pr-4 p-3 rounded-full hover:bg-lime-100 mr-6"
         >
-          {item.icon} {/* Render the icon */}
+          {item.icon}
         </span>
       </Link>
     </li>
   ))}
 </ul>
-
 
         </div>
         <div className="flex-1 text-xl gap-4 flex justify-end items-center">
