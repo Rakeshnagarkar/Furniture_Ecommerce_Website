@@ -1,16 +1,17 @@
 import React from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
+import { removeFromwishlist } from "../Slices/WishlistSlice"; 
 import Newsletter from "../components/Newsletter";
 
 function Wishlist() {
-  const CartItems = useSelector((state) => state.cart.items);
-  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
-  const totalAmount = useSelector((state) => state.cart.totalAmount);
+  // Use the correct selector for wishlist items
+  const wishlistItems = useSelector((state) => state.wishlist.items);
   const dispatch = useDispatch();
 
   const handleRemoveItem = (id) => {
-    dispatch(removeFromCart(id));
+    // Dispatch the correct action for removing an item from the wishlist
+    dispatch(removeFromwishlist(id));  removeFromwishlist
   };
 
   return (
@@ -28,8 +29,8 @@ function Wishlist() {
             </tr>
           </thead>
           <tbody className="bg-white">
-            {CartItems.length > 0 ? (
-              CartItems.map((item) => (
+            {wishlistItems.length > 0 ? (
+              wishlistItems.map((item) => (
                 <tr key={item.id} className="hover:bg-gray-100 text-left">
                   <td className="py-3 px-3 border border-gray-300">{item.id}</td>
                   <td className="py-3 px-3 border border-gray-300">{item.name}</td>
@@ -53,13 +54,11 @@ function Wishlist() {
               </tr>
             )}
           </tbody>
-         
         </table>
       </div>
-      <div className='w-11/12 py-5'>
-        <Newsletter/>
-        
-        </div>
+      <div className="w-11/12 py-5">
+        <Newsletter />
+      </div>
     </div>
   );
 }
